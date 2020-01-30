@@ -20,18 +20,21 @@ export class DashboardComponent implements OnInit {
   }
   
 
+  // display the ramdom image on load/ landing
   public getRandom() {
     var catList = this.dashboardService.getRandom().subscribe((data) => {
       this.catList = data;     
     });   
   }
 
+  // display the category List in dropdown
   public getAllCategory() {
     var categoryList = this.dashboardService.getAllCategory().subscribe((data) => {
       this.categoryList = data;     
     });   
   }
-  
+
+  //display the according to category
   modelChanged(value:string) {  
     var catList = this.dashboardService.getCatImagesBycategoryId(value).subscribe((data) => {
       this.catList = data;      
