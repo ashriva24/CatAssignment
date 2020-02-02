@@ -1,15 +1,16 @@
-.main-container{
-width:80%;
-margin-left: 10%;
+.img-box {  
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-size: cover; 
 }
 
-.img-box{
-width: 100px;
-height: 100px;    
+.div-row{
+  display:inline-block;
+  width:100%;
+  margin-bottom:2px;
 }
 
-.ddl-category{
-width: 100px;
-height: 30px;  
-margin-bottom: 10px ;  
+.top-margin{
+  margin-top:10px;
 }

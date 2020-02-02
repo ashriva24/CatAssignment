@@ -1,17 +1,16 @@
-<div class="main-container">
-
-<H2>Dashboard</H2>
-<div>
-        <select   #selectedCategory class="ddl-category" (change)="modelChanged(selectedCategory.value)">
-                <option disabled>Select Category</option>                
-                <option *ngFor="let category of categoryList" [value]="category.id">{{category.name | titlecase }}</option>
-        </select>
-</div>
-<div>
-    <div *ngFor="let catDetail of catList">          
-    <div>  
-      <img src="{{catDetail.url}}" alt="{{catDetail.id}}" class="img-box"/>
-    </div>
+<div class="container col-md-8">
+  <div class="row">
+    <H2>Dashboard</H2>
+  </div>
+  <div class="row">
+    <select #selectedCategory class="dropdown" (change)="modelChanged(selectedCategory.value)">
+      <option disabled>Select Category</option>
+      <option *ngFor="let category of categoryList" [value]="category.id">{{category.name | titlecase }}</option>
+    </select>
+  </div>
+  <div class="row top-margin">
+    <div *ngFor="let catDetail of catList" class="div-row" >    
+        <img src="{{catDetail.url}}" alt="{{catDetail.id}}" class="img-box" />      
     </div>
   </div>
 </div>
